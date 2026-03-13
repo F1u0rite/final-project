@@ -1,0 +1,64 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters
+#--------------------------------------------------------------------------------------------
+File.version: "1.0"
+
+Camera.type: "PinHole"
+
+# Camera calibration and distortion parameters (OpenCV)  (from /camera/rgb/camera_info)
+Camera1.fx: 537.960321985614
+Camera1.fy: 539.597659163239
+Camera1.cx: 319.183641033155
+Camera1.cy: 247.053820358135
+
+# distortion parameters (plumb_bob -> k1 k2 p1 p2 k3)
+Camera1.k1: 0.0263704224826013
+Camera1.k2: -0.10008645619921
+Camera1.p1: 0.00313758409632316
+Camera1.p2: 0.00242072236844001
+Camera1.k3: 0.0
+
+# Camera resolution
+Camera.width: 640
+Camera.height: 480
+
+# Camera frames per second (unknown from bag info; set a reasonable default)
+Camera.fps: 30
+
+# Color order of the images (0: BGR, 1: RGB)
+Camera.RGB: 1
+
+# Close/Far threshold. Baseline times.
+# (RGB-D mode does NOT use baseline; keep values for compatibility)
+Stereo.ThDepth: 40.0
+Stereo.b: 0.0
+
+# Depth map values factor
+# Your depth encoding is 32FC1 (float meters) -> factor must be 1.0
+RGBD.DepthMapFactor: 1.0
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+ORBextractor.nFeatures: 2500
+ORBextractor.scaleFactor: 1.2
+ORBextractor.nLevels: 8
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -3.5
+Viewer.ViewpointF: 500.0
+
