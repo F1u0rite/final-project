@@ -1,7 +1,7 @@
 # VLMaps 部分最终输出要求（给下游 VLFM / A* 使用）
 
 ## 一、请你最终输出给我的文件目录结构
-
+```
 scene_export/
 ├─ occupancy_map.npy
 ├─ occupancy_map.png
@@ -10,7 +10,7 @@ scene_export/
 ├─ topdown_rgb_map.png
 ├─ map_metadata.json
 └─ export_readme.txt
-
+```
 ---
 
 ## 二、每个输出文件的具体要求
@@ -52,6 +52,7 @@ scene_export/
 - 每个对象至少包含以下字段
 
 **示例格式：**
+```
 {
   "objects": [
     {
@@ -65,7 +66,7 @@ scene_export/
     }
   ]
 }
-
+```
 **字段说明：**
 - `object_id`：对象编号
 - `label`：语义类别，例如 `chair` / `door` / `desk` / `bookshelf`
@@ -85,6 +86,7 @@ scene_export/
 - 每个语义点至少包含以下字段
 
 **示例格式：**
+```
 {
   "points": [
     {
@@ -95,7 +97,7 @@ scene_export/
     }
   ]
 }
-
+```
 **说明：**
 - 如果 `semantic_objects.json` 已经比较完整，这个文件可以作为补充
 - 如果对象级结果不好做，至少一定要给这个文件
@@ -124,6 +126,7 @@ scene_export/
 至少包含以下内容：
 
 **示例格式：**
+```
 {
   "scene_name": "library_scene_01",
   "map_height": 400,
@@ -140,7 +143,7 @@ scene_export/
     "2": "unknown"
   }
 }
-
+```
 **字段说明：**
 - `scene_name`：场景名称
 - `map_height`, `map_width`：地图尺寸
